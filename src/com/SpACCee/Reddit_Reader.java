@@ -80,7 +80,7 @@ public class Reddit_Reader {
                     for(int ii = temp; ii < tempS.length(); ii++){
                         link += tempS.toCharArray()[ii];
                     }
-                    getImages(tempS, folderPath + "\\" + link);
+                    getImages(tempS, folderPath + "\\" + link.replace(' ','_'));
 
                 }
 

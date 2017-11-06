@@ -76,7 +76,7 @@ public class Instagram_Reader {
         URL url = new URL(src);
         InputStream in = url.openStream();
 
-        OutputStream out = new BufferedOutputStream(new FileOutputStream( folderPath + counter + ".jpg"));
+        OutputStream out = new BufferedOutputStream(new FileOutputStream( folderPath + "\\" + counter + ".jpg"));
 
         for (int b; (b = in.read()) != -1;) {
             out.write(b);
