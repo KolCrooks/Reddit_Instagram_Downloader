@@ -1,10 +1,11 @@
 package com.SpACCee;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
 
         //Instagram or Reddit?
@@ -24,7 +25,12 @@ public class Main {
 
                 Reddit_Reader rr = new Reddit_Reader(website,path,pgs);
         }else if(website.toLowerCase().contains("https://www.instagram.com/".toLowerCase()) || website.toLowerCase().contains("https://www.instagram.com".toLowerCase())){
-            Instagram_Reader ir = new Instagram_Reader(website,path);
+
+            //RUN PYTHON SCRIPT TO SCRAPE INSTAGRAM PHOTOS
+
+            String command = "python /c start python " + "C:\\Users\\kol\\IdeaProjects\\Meme_Downloader\\out\\artifacts\\Meme_Downloader_jar\\InstaLoader.py" + " profile ";
+            Process p = Runtime.getRuntime().exec(command);
+
         }else{
             System.out.println("YOU DIDN'T INPUT A LINK TO EITHER A REDDIT PAGE OR AN INSTAGRAM PAGE");
         }
