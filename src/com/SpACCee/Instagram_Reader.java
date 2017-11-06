@@ -8,16 +8,12 @@ import java.net.URL;
 
 public class Instagram_Reader {
 
-    //The url of the website. This is just an example
-    private static String webSiteURL = "https://www.instagram.com/neymarjr/";
-
     //The path of the folder that you want to save the images to
     private static String folderPath = "C:\\Users\\kol\\Desktop\\test\\";
 
     static int counter = 0;
 
     public Instagram_Reader(String webSiteURL, String folderPath){
-    if(webSiteURL != null) this.webSiteURL = webSiteURL;
     if(folderPath != null) this.folderPath = folderPath;
 
 
