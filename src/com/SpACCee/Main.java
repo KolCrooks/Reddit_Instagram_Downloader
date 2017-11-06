@@ -28,7 +28,16 @@ public class Main {
 
             //RUN PYTHON SCRIPT TO SCRAPE INSTAGRAM PHOTOS
 
-            String command = "python /c start python " + "C:\\Users\\kol\\IdeaProjects\\Meme_Downloader\\out\\artifacts\\Meme_Downloader_jar\\InstaLoader.py" + " profile ";
+            int index = 0;
+            int count = 0;
+            while(count < 3){
+                if(website.toCharArray()[index] == '/') count++;
+                index++;
+            }
+
+            String sub = website.substring(index);
+
+            String command = "python /c start python " + "C:\\Users\\kol\\IdeaProjects\\Meme_Downloader\\out\\artifacts\\Meme_Downloader_jar\\InstaLoader.py" + " profile " + sub;
             Process p = Runtime.getRuntime().exec(command);
 
         }else{
