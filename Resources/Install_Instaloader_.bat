@@ -1,0 +1,2 @@
+pip3 install instaloader
+PAUSE
